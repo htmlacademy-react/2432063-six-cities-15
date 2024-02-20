@@ -5,7 +5,6 @@ type MainPageProps = {
 }
 
 
-
 function MainPage({quantityPlaceCard}: MainPageProps): JSX.Element {
 
 
