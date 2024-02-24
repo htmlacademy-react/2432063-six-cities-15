@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import RenderMainPage from './components/app';
+import App from './components/app';
 import { Setting } from './mocks';
 
 const root = ReactDOM.createRoot(
@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <RenderMainPage
+    <App
       quantityPlaceCard = {Setting.quantityPlaceCard}
     />
   </React.StrictMode>
