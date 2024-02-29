@@ -1,14 +1,18 @@
 import PlaceCard from '../../components/place-card';
+import { OfferType } from '../../types/types';
+
 
 type MainPageProps = {
   quantityPlaceCard: number;
+  offers: Array<OfferType>;
 }
 
 
-function MainPage({quantityPlaceCard}: MainPageProps): JSX.Element {
+function MainPage({quantityPlaceCard, offers}: MainPageProps): JSX.Element {
 
+  //const qqq = (offers) => PlaceCard offers={offers};
+  //const renderCard = Array.from({length: quantityPlaceCard}, PlaceCard);
 
-  const renderCard = Array.from({length: quantityPlaceCard}, PlaceCard);
 
   return (
     <div className="page page--gray page--main">
@@ -103,7 +107,8 @@ function MainPage({quantityPlaceCard}: MainPageProps): JSX.Element {
               </form>
               <div className="cities__places-list places__list tabs__content">
 
-                {renderCard}
+                {<PlaceCard offers={offers} />}
+
 
               </div>
             </section>
