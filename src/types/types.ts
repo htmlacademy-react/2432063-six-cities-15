@@ -4,6 +4,7 @@ export type OfferType = {
   previewImage: string;
   cardImg: string[];
   isPremium: boolean;
+  isFavorite: boolean;
   cardBookmarks: string;
   cardRating: number;
   cardDescription: string;
