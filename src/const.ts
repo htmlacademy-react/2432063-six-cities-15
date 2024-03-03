@@ -1,5 +1,9 @@
-export const Setting = {
-  quantityPlaceCard: 5
+export const reviewRating = {
+  'fiveStars': '5',
+  'fourStars': '4',
+  'threeStars': '3',
+  'twoStars': '2',
+  'oneStar': '1'
 };
 
 export enum AppRoute {
