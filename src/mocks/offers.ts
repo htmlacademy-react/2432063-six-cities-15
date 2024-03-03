@@ -1,79 +1,134 @@
-export const offers = [
+import { OffersType } from '../types/types';
+
+
+export const offers: OffersType = [
   {
-    id: 0,
+    id: '1',
     cardPrice: 180,
-    cardImg: 'img/apartment-02.jpg',
+    previewImage: 'img/apartment-01.jpg',
+    cardImg: [
+      'img/apartment-01.jpg',
+      'img/apartment-02.jpg',
+      'img/apartment-03.jpg',
+    ],
     isPremium: false,
     cardBookmarks: 'place-card__bookmark-button place-card__bookmark-button--active button',
     cardRating: 4.5,
     cardDescription: 'Beautiful & luxurious apartment at great location',
-    cardType: 'Apartment'
+    cardType: 'Apartment',
+    insideItem: [
+      'Wi-Fi',
+      'Washing machine',
+      'Towels',
+      'Heating',
+      'Coffee machine',
+      'Baby seat'
+    ]
   },
   {
-    id: 1,
+    id: '2',
     cardPrice: 240,
-    cardImg: 'img/room.jpg',
+    previewImage: 'img/apartment-01.jpg',
+    cardImg: [
+      'img/apartment-01.jpg',
+      'img/apartment-01.jpg',
+      'img/apartment-01.jpg',
+      'img/apartment-01.jpg',
+      'img/apartment-01.jpg',
+      'img/apartment-01.jpg',
+    ],
     isPremium: true,
     cardBookmarks: 'place-card__bookmark-button button',
     cardRating: 3,
     cardDescription: 'Beautiful & luxurious apartment at great location',
-    cardType: 'Apartment'
+    cardType: 'Apartment',
+    insideItem: [
+      'Wi-Fi',
+      'Washing machine',
+      'Towels',
+      'Heating',
+      'Coffee machine',
+      'Baby seat'
+    ]
   },
   {
-    id: 2,
+    id: '3',
     cardPrice: 190,
-    cardImg: 'img/apartment-02.jpg',
+    previewImage: 'img/apartment-01.jpg',
+    cardImg: [
+      'img/apartment-01.jpg',
+      'img/apartment-01.jpg',
+      'img/apartment-01.jpg',
+      'img/apartment-01.jpg',
+      'img/apartment-01.jpg',
+      'img/apartment-01.jpg',
+    ],
     isPremium: false,
     cardBookmarks: 'place-card__bookmark-button button',
     cardRating: 4,
     cardDescription: 'Canal View Prinsengracht',
-    cardType: 'Room'
+    cardType: 'Room',
+    insideItem: [
+      'Wi-Fi',
+      'Washing machine',
+      'Towels',
+      'Heating',
+      'Coffee machine',
+      'Baby seat'
+    ]
   },
   {
-    id: 3,
+    id: '4',
     cardPrice: 370,
-    cardImg: 'img/apartment-03.jpg',
+    previewImage: 'img/apartment-01.jpg',
+    cardImg: [
+      'img/apartment-01.jpg',
+      'img/apartment-01.jpg',
+      'img/apartment-01.jpg',
+      'img/apartment-01.jpg',
+      'img/apartment-01.jpg',
+      'img/apartment-01.jpg',
+    ],
     isPremium: false,
     cardBookmarks: 'place-card__bookmark-button button',
     cardRating: 3,
     cardDescription: 'Nice, cozy, warm big bed apartment',
-    cardType: 'Apartment'
+    cardType: 'Apartment',
+    insideItem: [
+      'Wi-Fi',
+      'Washing machine',
+      'Towels',
+      'Heating',
+      'Coffee machine',
+      'Baby seat'
+    ]
   },
   {
-    id: 4,
+    id: '5',
     cardPrice: 400,
-    cardImg: 'img/room.jpg',
+    previewImage: 'img/apartment-01.jpg',
+    cardImg: [
+      'img/apartment-01.jpg',
+      'img/apartment-01.jpg',
+      'img/apartment-01.jpg',
+      'img/apartment-01.jpg',
+      'img/apartment-01.jpg',
+      'img/apartment-01.jpg',
+    ],
     isPremium: true,
     cardBookmarks: 'place-card__bookmark-button place-card__bookmark-button--active button',
     cardRating: 2,
     cardDescription: 'Wood and stone place',
-    cardType: 'Room'
+    cardType: 'Room',
+    insideItem: [
+      'Wi-Fi',
+      'Washing machine',
+      'Towels',
+      'Heating',
+      'Coffee machine',
+      'Baby seat'
+    ]
   },
 ];
 
 
-export const Favorite = [
-  {
-    id: '6af6f711-c28d-4121-82cd-e0b462a27f00',
-    title: 'Beautiful & luxurious studio at great location',
-    type: 'apartment',
-    price: 120,
-    city: {
-      name: 'Amsterdam',
-      location: {
-        latitude: 52.35514938496378,
-        ongitude: 4.673877537499948,
-        zoom: 8
-      }
-    },
-    location: {
-      latitude: 52.35514938496378,
-      longitude: 4.673877537499948,
-      zoom: 8
-    },
-    isFavorite: false,
-    isPremium: false,
-    rating: 4,
-    previewImage: 'https://url-to-image/image.png'
-  }
-];
