@@ -5,13 +5,13 @@ function ReviewsForm(): JSX.Element {
   const [comment, setComment] = useState('');
   const [rating, setRating] = useState('0');
 
-  function handleInputChange(evt: ChangeEvent<HTMLInputElement>) {
+  const handleInputChange = (evt: ChangeEvent<HTMLInputElement>) => {
     setRating(evt.target.value);
-  }
+  };
 
-  function handleTextAreaChange(evt: ChangeEvent<HTMLTextAreaElement>) {
+  const handleTextAreaChange = (evt: ChangeEvent<HTMLTextAreaElement>) => {
     setComment(evt.target.value);
-  }
+  };
 
   return (
     <form className="reviews__form form" action="#" method="post">

@@ -1,15 +1,19 @@
 export type OfferType = {
   id: string;
-  cardPrice: number;
-  previewImage: string;
-  cardImg: string[];
-  isPremium: boolean;
+  title: string;
+  type: string;
+  price: number;
+
   isFavorite: boolean;
+  isPremium: boolean;
+  rating: number;
+  description: string;
+  bedrooms: number;
+  goods: string[];
+  images: string[];
+
+  previewImage: string;
   cardBookmarks: string;
-  cardRating: number;
-  cardDescription: string;
-  cardType: string;
-  insideItem: string[];
 };
 
 export type OffersType = OfferType[];

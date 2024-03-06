@@ -18,9 +18,9 @@ function Premium(): JSX.Element {
 }
 
 function PlaceCard({offerCard, setCardHoverId}: PlaceCardProps): JSX.Element {
-  const {isPremium, previewImage, cardPrice, cardRating, cardDescription, cardType, id, isFavorite } = offerCard;
+  const {isPremium, previewImage, price, rating, title, type, id, isFavorite } = offerCard;
   const [isFavoriteCard, setIsFavoriteCard] = useState(isFavorite);
-  const premium = isPremium > false ? Premium() : '';
+  const premium = isPremium && <Premium />;
 
   const handleMouseOver = () => {
     setCardHoverId(id);
@@ -41,7 +41,7 @@ function PlaceCard({offerCard, setCardHoverId}: PlaceCardProps): JSX.Element {
       <div className="place-card__info">
         <div className="place-card__price-wrapper">
           <div className="place-card__price">
-            <b className="place-card__price-value">&euro;{cardPrice}</b>
+            <b className="place-card__price-value">&euro;{price}</b>
             <span className="place-card__price-text">&#47;&nbsp;night</span>
           </div>
           <button onClick={() => setIsFavoriteCard(!isFavoriteCard)}
@@ -55,14 +55,14 @@ function PlaceCard({offerCard, setCardHoverId}: PlaceCardProps): JSX.Element {
         </div>
         <div className="place-card__rating rating">
           <div className="place-card__stars rating__stars">
-            <span style={{width: `${cardRating * 100 / 5 }%`}}></span>
+            <span style={{width: `${rating * 20 }%`}}></span>
             <span className="visually-hidden">Rating</span>
           </div>
         </div>
         <h2 className="place-card__name">
-          <Link to={`offer/${id}`}>Beautiful &amp; {cardDescription}</Link>
+          <Link to={`offer/${id}`}>Beautiful &amp; {title}</Link>
         </h2>
-        <p className="place-card__type">{cardType}</p>
+        <p className="place-card__type">{type}</p>
       </div>
     </article>
   );

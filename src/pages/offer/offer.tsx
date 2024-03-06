@@ -10,7 +10,7 @@ function Offer({offers}: OfferProps): JSX.Element {
   const params = useParams();
   const cardId = params.id;
   const selectedCard = offers.filter((offer) => offer.id === cardId)[0];
-  const {cardImg, cardRating, insideItem} = selectedCard;
+  const {images, rating, goods} = selectedCard;
   return (
     <div className="page">
       <header className="header">
@@ -46,7 +46,7 @@ function Offer({offers}: OfferProps): JSX.Element {
         <section className="offer">
           <div className="offer__gallery-container container">
             <div className="offer__gallery">
-              {cardImg.map((url, id) => {
+              {images.map((url, id) => {
                 const keyValue = `${id}-${url}`;
                 return (
                   <div key={keyValue} className="offer__image-wrapper">
@@ -74,10 +74,10 @@ function Offer({offers}: OfferProps): JSX.Element {
               </div>
               <div className="offer__rating rating">
                 <div className="offer__stars rating__stars">
-                  <span style={{width: `${cardRating * 100 / 5 }%`}}></span>
+                  <span style={{width: `${rating * 100 / 5 }%`}}></span>
                   <span className="visually-hidden">Rating</span>
                 </div>
-                <span className="offer__rating-value rating__value">{cardRating}</span>
+                <span className="offer__rating-value rating__value">{rating}</span>
               </div>
               <ul className="offer__features">
                 <li className="offer__feature offer__feature--entire">
@@ -97,7 +97,7 @@ function Offer({offers}: OfferProps): JSX.Element {
               <div className="offer__inside">
                 <h2 className="offer__inside-title">What&apos;s inside</h2>
                 <ul className="offer__inside-list">
-                  {insideItem.map((good) => {
+                  {goods.map((good) => {
                     const keyValue = good;
                     return (<li key={keyValue} className="offer__inside-item">{good}</li>);
                   })}
