@@ -8,23 +8,26 @@ import FavoritesScreen from '../pages/favorites/favorites';
 import Offer from '../pages/offer/offer';
 import Error from '../pages/error/error';
 
+import { OffersType } from '../types/types';
+
+
 type AppProps = {
-  quantityPlaceCard: number;
+  offers: OffersType;
 }
 
-function App({quantityPlaceCard}: AppProps): JSX.Element {
+function App({offers}: AppProps): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<MainPage quantityPlaceCard={quantityPlaceCard}/>} />
+        <Route path='/' element={<MainPage offers={offers} />} />
         <Route path='login' element={<LoginScreen />} />
         <Route path='favorites' element={
-          <PrivateRoute authorizationStatus={AuthorizationStatus.NoAuth}>
+          <PrivateRoute authorizationStatus={AuthorizationStatus.Auth}>
             <FavoritesScreen />
           </PrivateRoute>
         }
         />
-        <Route path='offer/:id' element={<Offer />} />
+        <Route path='offer/:id' element={<Offer offers={offers} />} />
         <Route path='*' element={<Error />} />
       </Routes>
     </BrowserRouter>

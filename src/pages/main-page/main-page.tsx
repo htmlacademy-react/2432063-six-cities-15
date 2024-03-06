@@ -1,15 +1,15 @@
-import PlaceCard from '../../components/place-card';
+import PlaceCardList from '../../components/place-card-list';
+import { OffersType } from '../../types/types';
+import {useState} from 'react';
+
 
 type MainPageProps = {
-  quantityPlaceCard: number;
+  offers: OffersType;
 }
 
 
-function MainPage({quantityPlaceCard}: MainPageProps): JSX.Element {
-
-
-  const renderCard = Array.from({length: quantityPlaceCard}, PlaceCard);
-
+function MainPage({offers}: MainPageProps): JSX.Element {
+  const [cardHoverId, setCardHoverId] = useState<string | null>(null);
   return (
     <div className="page page--gray page--main">
       <header className="header">
@@ -103,12 +103,13 @@ function MainPage({quantityPlaceCard}: MainPageProps): JSX.Element {
               </form>
               <div className="cities__places-list places__list tabs__content">
 
-                {renderCard}
+                {<PlaceCardList offers={offers} setCardHoverId = {setCardHoverId} />}
+
 
               </div>
             </section>
             <div className="cities__right-section">
-              <section className="cities__map map"></section>
+              <section className="cities__map map">{cardHoverId}</section>
             </div>
           </div>
         </div>
