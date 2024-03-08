@@ -1,6 +1,9 @@
 import PlaceCardList from '../../components/place-card-list';
+import Map from '../../components/map';
+
 import { OffersType } from '../../types/types';
-import {useState} from 'react';
+import { useState } from 'react';
+import { CITY } from '../../mocks/city';
 
 
 type MainPageProps = {
@@ -109,7 +112,7 @@ function MainPage({offers}: MainPageProps): JSX.Element {
               </div>
             </section>
             <div className="cities__right-section">
-              <section className="cities__map map">{cardHoverId}</section>
+              <Map offers={offers} CITY={CITY}/>
             </div>
           </div>
         </div>
