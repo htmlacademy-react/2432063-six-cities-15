@@ -17,3 +17,10 @@ export type OfferType = {
 };
 
 export type OffersType = OfferType[];
+
+export type City = {
+  title: string;
+  lat: number;
+  lng: number;
+  zoom: number;
+};
