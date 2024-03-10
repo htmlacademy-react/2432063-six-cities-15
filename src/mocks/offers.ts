@@ -7,6 +7,24 @@ export const offers: OffersType = [
     title: 'Beautiful & luxurious apartment at great location',
     type: 'Apartment',
     price: 180,
+    city: {
+      name: 'Amsterdam',
+      location: {
+        latitude: 52.3909553943508,
+        longitude: 4.85309666406198,
+        zoom: 10
+      }
+    },
+    location: {
+      latitude: 52.3909553943508,
+      longitude: 4.85309666406198,
+      zoom: 8
+    },
+    host: {
+      hostName: 'Angelina',
+      isPro: true,
+      avatarUrl: 'https://i.pravatar.cc/128'
+    },
 
     isFavorite: true,
     isPremium: false,
@@ -35,6 +53,24 @@ export const offers: OffersType = [
     title: 'Beautiful & luxurious apartment at great location',
     type: 'Apartment',
     price: 280,
+    city: {
+      name: 'Amsterdam',
+      location: {
+        latitude: 52.3809553943508,
+        longitude: 4.939309666406198,
+        zoom: 10
+      }
+    },
+    location: {
+      latitude: 52.3809553943508,
+      longitude: 4.939309666406198,
+      zoom: 8
+    },
+    host: {
+      hostName: 'Jim',
+      isPro: false,
+      avatarUrl: 'https://i.pravatar.cc/128'
+    },
 
     isFavorite: true,
     isPremium: true,
@@ -63,6 +99,24 @@ export const offers: OffersType = [
     title: 'Beautiful & luxurious apartment at great location',
     type: 'Apartment',
     price: 380,
+    city: {
+      name: 'Amsterdam',
+      location: {
+        latitude: 52.3909553943508,
+        longitude: 4.929309666406198,
+        zoom: 10
+      }
+    },
+    location: {
+      latitude: 52.3909553943508,
+      longitude: 4.929309666406198,
+      zoom: 8
+    },
+    host: {
+      hostName: 'Mila',
+      isPro: false,
+      avatarUrl: 'https://i.pravatar.cc/128'
+    },
 
     isFavorite: true,
     isPremium: false,
