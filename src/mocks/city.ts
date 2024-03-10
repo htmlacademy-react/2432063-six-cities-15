@@ -1,6 +1,6 @@
-import { City } from '../types/types';
+import { CityMap } from '../types/types';
 
-export const CITY: City = {
+export const CITY: CityMap = {
   title: 'Amsterdam',
   lat: 52.37454,
   lng: 4.897976,
