@@ -3,6 +3,9 @@ export type OfferType = {
   title: string;
   type: string;
   price: number;
+  city: City;
+  host: Host;
+  location: Location;
 
   isFavorite: boolean;
   isPremium: boolean;
@@ -17,3 +20,27 @@ export type OfferType = {
 };
 
 export type OffersType = OfferType[];
+
+export type CityMap = {
+  title: string;
+  lat: number;
+  lng: number;
+  zoom: number;
+};
+
+export type Host = {
+  hostName: string;
+  isPro: boolean;
+  avatarUrl: string;
+};
+
+export type City = {
+  name: string;
+  location: Location;
+};
+
+export type Location = {
+  latitude: number;
+  longitude: number;
+  zoom: number;
+};
