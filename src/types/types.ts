@@ -44,3 +44,19 @@ export type Location = {
   longitude: number;
   zoom: number;
 };
+
+export type Review = {
+  id: string;
+  comment: string;
+  date: string;
+  rating: number;
+  user: user;
+}
+
+export type Reviews = Review[];
+
+export type user = {
+userName: string;
+avatarUrl: string;
+isPro: boolean;
+}
