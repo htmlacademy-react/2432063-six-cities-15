@@ -1,7 +1,11 @@
 import { OffersType, Reviews } from '../../types/types';
 import { useParams } from 'react-router-dom';
+import { CITY } from '../../mocks/city';
+import { useState } from 'react';
+
 import ReviewsForm from '../../components/reviews-form';
 import ReviewsList from '../../components/reviews-list';
+import Map from '../../components/map';
 
 type OfferProps = {
   offers: OffersType;
@@ -13,6 +17,7 @@ function Offer({offers, reviews}: OfferProps): JSX.Element {
   const cardId = params.id;
   const selectedCard = offers.filter((offer) => offer.id === cardId)[0];
   const {images, rating, goods} = selectedCard;
+  const [cardHoverId] = useState<string | null>(null);
   return (
     <div className="page">
       <header className="header">
@@ -131,7 +136,7 @@ function Offer({offers, reviews}: OfferProps): JSX.Element {
               {<ReviewsForm />}
             </div>
           </div>
-          <section className="offer__map map"></section>
+          {<Map offers={offers} CITY={CITY} cardHoverId={cardHoverId}/>}
         </section>
         <div className="container">
           <section className="near-places places">
