@@ -14,10 +14,9 @@ import { OffersType, Reviews } from '../types/types';
 type AppProps = {
   offers: OffersType;
   reviews: Reviews;
-  offersNear: OffersType;
 }
 
-function App({offers, reviews, offersNear}: AppProps): JSX.Element {
+function App({offers, reviews}: AppProps): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
@@ -29,7 +28,7 @@ function App({offers, reviews, offersNear}: AppProps): JSX.Element {
           </PrivateRoute>
         }
         />
-        <Route path='offer/:id' element={<Offer offers={offersNear} reviews={reviews} />} />
+        <Route path='offer/:id' element={<Offer offers={offers} reviews={reviews} />} />
         <Route path='*' element={<Error />} />
       </Routes>
     </BrowserRouter>

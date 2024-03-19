@@ -4,7 +4,6 @@ import App from './components/app';
 
 import { offers } from './mocks/offers';
 import { reviews } from './mocks/reviews';
-import { offersNear } from './mocks/offers-near';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -15,7 +14,6 @@ root.render(
     <App
       offers = {offers}
       reviews = {reviews}
-      offersNear = {offersNear}
     />
   </React.StrictMode>
 );

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 type PlaceCardProps = {
   offerCard: OfferType;
-  setCardHoverId(id: string | null): void;
+  setCardHoverId?(id: string | null): void;
   placeType: 'cities' | 'near-places';
 }
 
@@ -24,11 +24,11 @@ function PlaceCard({offerCard, setCardHoverId, placeType}: PlaceCardProps): JSX.
   const premium = isPremium && <Premium />;
 
   const handleMouseOver = () => {
-    setCardHoverId(id);
+    setCardHoverId?.(id);
   };
 
   const handleMouseOut = () => {
-    setCardHoverId(null);
+    setCardHoverId?.(null);
   };
 
   return (

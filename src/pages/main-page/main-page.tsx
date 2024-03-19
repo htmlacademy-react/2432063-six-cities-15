@@ -109,7 +109,7 @@ function MainPage({offers}: MainPageProps): JSX.Element {
 
             </section>
             <div className="cities__right-section">
-              <Map offers={offers} CITY={CITY} cardHoverId={cardHoverId}/>
+              <Map offers={offers} CITY={CITY} cardHoverId={cardHoverId} mapType={'cities'}/>
             </div>
           </div>
         </div>
