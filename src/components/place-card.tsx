@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom';
 
 type PlaceCardProps = {
   offerCard: OfferType;
-  setCardHoverId(id: string | null): void;
+  setCardHoverId?(id: string | null): void;
+  placeType: 'cities' | 'near-places';
 }
 
 function Premium(): JSX.Element {
@@ -17,23 +18,23 @@ function Premium(): JSX.Element {
   );
 }
 
-function PlaceCard({offerCard, setCardHoverId}: PlaceCardProps): JSX.Element {
+function PlaceCard({offerCard, setCardHoverId, placeType}: PlaceCardProps): JSX.Element {
   const {isPremium, previewImage, price, rating, title, type, id, isFavorite } = offerCard;
   const [isFavoriteCard, setIsFavoriteCard] = useState(isFavorite);
   const premium = isPremium && <Premium />;
 
   const handleMouseOver = () => {
-    setCardHoverId(id);
+    setCardHoverId?.(id);
   };
 
   const handleMouseOut = () => {
-    setCardHoverId(null);
+    setCardHoverId?.(null);
   };
 
   return (
-    <article className="cities__card place-card" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+    <article className={`${placeType}__card place-card`} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
       {premium}
-      <div className="cities__image-wrapper place-card__image-wrapper">
+      <div className={`${placeType}__image-wrapper place-card__image-wrapper`}>
         <Link to={`offer/${id}`}>
           <img className="place-card__image" src={previewImage} width="260" height="200" alt="Place image"></img>
         </Link>
