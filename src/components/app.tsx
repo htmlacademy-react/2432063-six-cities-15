@@ -8,14 +8,15 @@ import FavoritesScreen from '../pages/favorites/favorites';
 import Offer from '../pages/offer/offer';
 import Error from '../pages/error/error';
 
-import { OffersType } from '../types/types';
+import { OffersType, Reviews } from '../types/types';
 
 
 type AppProps = {
   offers: OffersType;
+  reviews: Reviews;
 }
 
-function App({offers}: AppProps): JSX.Element {
+function App({offers, reviews}: AppProps): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
@@ -27,7 +28,7 @@ function App({offers}: AppProps): JSX.Element {
           </PrivateRoute>
         }
         />
-        <Route path='offer/:id' element={<Offer offers={offers} />} />
+        <Route path='offer/:id' element={<Offer offers={offers} reviews={reviews} />} />
         <Route path='*' element={<Error />} />
       </Routes>
     </BrowserRouter>
