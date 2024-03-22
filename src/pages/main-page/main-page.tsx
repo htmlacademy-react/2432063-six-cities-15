@@ -6,6 +6,8 @@ import { OffersType } from '../../types/types';
 import { useState } from 'react';
 import { CITY } from '../../mocks/city';
 
+import { useAppSelector } from '../../hooks';
+
 
 type MainPageProps = {
   offers: OffersType;
@@ -15,6 +17,9 @@ type MainPageProps = {
 
 function MainPage({offers, citiesList}: MainPageProps): JSX.Element {
   const [cardHoverId, setCardHoverId] = useState<string | null>(null);
+
+  const offersActive = useAppSelector((state) => state.offers);
+
   return (
     <div className="page page--gray page--main">
       <header className="header">
@@ -76,7 +81,7 @@ function MainPage({offers, citiesList}: MainPageProps): JSX.Element {
                 </ul>
               </form>
 
-              {<PlaceCardList offers={offers} setCardHoverId = {setCardHoverId} />}
+              {<PlaceCardList offers={offersActive} setCardHoverId = {setCardHoverId} />}
 
             </section>
             <div className="cities__right-section">

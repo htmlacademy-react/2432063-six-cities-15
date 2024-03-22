@@ -1,5 +1,5 @@
 import { useAppDispatch, useAppSelector } from '../hooks';
-import { setCityActive } from '../store/action';
+import { getOffersActive, setCityActive } from '../store/action';
 
 type LocationsListProps = {
   citiesList: string[];
@@ -12,6 +12,7 @@ function LocationsList({citiesList}: LocationsListProps): JSX.Element {
 
   function changeCity (city:string) {
     dispatch(setCityActive(city));
+    dispatch(getOffersActive());
   }
 
   return (
