@@ -9,8 +9,8 @@ const initialState = {
 
 const reducer = createReducer(initialState, (builder) => {
   builder
-    .addCase(setCityActive, (state) => {
-      state.cityActive = DEFAULT_CITY;
+    .addCase(setCityActive, (state, action) => {
+      state.cityActive = action.payload;
     });
 });
 

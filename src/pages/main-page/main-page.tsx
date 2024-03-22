@@ -9,10 +9,11 @@ import { CITY } from '../../mocks/city';
 
 type MainPageProps = {
   offers: OffersType;
+  citiesList: string[];
 }
 
 
-function MainPage({offers}: MainPageProps): JSX.Element {
+function MainPage({offers, citiesList}: MainPageProps): JSX.Element {
   const [cardHoverId, setCardHoverId] = useState<string | null>(null);
   return (
     <div className="page page--gray page--main">
@@ -49,7 +50,7 @@ function MainPage({offers}: MainPageProps): JSX.Element {
         <h1 className="visually-hidden">Cities</h1>
         <div className="tabs">
 
-          <LocationsList />
+          <LocationsList citiesList={citiesList} />
 
         </div>
 

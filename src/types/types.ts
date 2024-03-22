@@ -60,3 +60,12 @@ userName: string;
 avatarUrl: string;
 isPro: boolean;
 }
+
+export type CityList = {
+  Paris: string;
+  Cologne: string;
+  Brussels: string;
+  Amsterdam: string;
+  Hamburg: string;
+  Dusseldorf: string;
+};
