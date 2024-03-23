@@ -17,6 +17,8 @@ function MainPage({citiesList}: MainPageProps): JSX.Element {
 
   const offersActive = useAppSelector((state) => state.offers);
   const mapActions = useAppSelector((state) => state.city);
+  const cityActive = useAppSelector((state) => state.cityActive);
+  const placesCount = offersActive.length;
 
   return (
     <div className="page page--gray page--main">
@@ -62,7 +64,7 @@ function MainPage({citiesList}: MainPageProps): JSX.Element {
           <div className="cities__places-container container">
             <section className="cities__places places">
               <h2 className="visually-hidden">Places</h2>
-              <b className="places__found">312 places to stay in Amsterdam</b>
+              <b className="places__found">{placesCount} places to stay in {cityActive}</b>
               <form className="places__sorting" action="#" method="get">
                 <span className="places__sorting-caption">Sort by</span>
                 <span className="places__sorting-type" tabIndex={0}>
