@@ -103,15 +103,15 @@ export const offers: OffersType = [
     city: {
       name: 'Paris',
       location: {
-        latitude: 52.3909553943508,
-        longitude: 4.929309666406198,
+        latitude: 48.856615550,
+        longitude: 2.351499004,
         zoom: 10
       }
     },
     location: {
-      latitude: 52.3909553943508,
-      longitude: 4.929309666406198,
-      zoom: 8
+      latitude: 48.856615550,
+      longitude: 2.351499004,
+      zoom: 10
     },
     host: {
       hostName: 'Mila',

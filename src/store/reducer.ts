@@ -1,6 +1,6 @@
 import {createReducer} from '@reduxjs/toolkit';
-import {setCityActive, getOffersActive} from './action';
-import { DEFAULT_CITY } from '../const';
+import {setCityActive, getOffersActive, setMapActive} from './action';
+import { DEFAULT_CITY, defaultLocation } from '../const';
 import { offers } from '../mocks/offers';
 
 
@@ -9,6 +9,7 @@ const initialState = {
   offers: offers.filter(
     (item) => item?.city?.name === DEFAULT_CITY
   ),
+  city: defaultLocation,
 };
 
 const reducer = createReducer(initialState, (builder) => {
@@ -20,8 +21,10 @@ const reducer = createReducer(initialState, (builder) => {
       state.offers = offers.filter(
         (item) => item?.city?.name === state.cityActive
       );
+    })
+    .addCase(setMapActive, (state, action) => {
+      state.city = action.payload;
     });
-
 });
 
 export {reducer};

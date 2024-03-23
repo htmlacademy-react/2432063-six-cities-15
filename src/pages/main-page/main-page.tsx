@@ -2,23 +2,21 @@ import PlaceCardList from '../../components/place-card-list';
 import Map from '../../components/map';
 import LocationsList from '../../components/locations-list';
 
-import { OffersType } from '../../types/types';
 import { useState } from 'react';
-import { CITY } from '../../mocks/city';
 
 import { useAppSelector } from '../../hooks';
 
 
 type MainPageProps = {
-  offers: OffersType;
   citiesList: string[];
 }
 
 
-function MainPage({offers, citiesList}: MainPageProps): JSX.Element {
+function MainPage({citiesList}: MainPageProps): JSX.Element {
   const [cardHoverId, setCardHoverId] = useState<string | null>(null);
 
   const offersActive = useAppSelector((state) => state.offers);
+  const mapActions = useAppSelector((state) => state.city);
 
   return (
     <div className="page page--gray page--main">
@@ -85,7 +83,7 @@ function MainPage({offers, citiesList}: MainPageProps): JSX.Element {
 
             </section>
             <div className="cities__right-section">
-              <Map offers={offers} CITY={CITY} cardHoverId={cardHoverId} mapType={'cities'}/>
+              <Map offers={offersActive} CITY={mapActions} cardHoverId={cardHoverId} mapType={'cities'}/>
             </div>
           </div>
         </div>
