@@ -14,13 +14,14 @@ import { OffersType, Reviews } from '../types/types';
 type AppProps = {
   offers: OffersType;
   reviews: Reviews;
+  citiesList: string[];
 }
 
-function App({offers, reviews}: AppProps): JSX.Element {
+function App({offers, reviews, citiesList}: AppProps): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<MainPage offers={offers} />} />
+        <Route path='/' element={<MainPage citiesList={citiesList} />} />
         <Route path='login' element={<LoginScreen />} />
         <Route path='favorites' element={
           <PrivateRoute authorizationStatus={AuthorizationStatus.Auth}>
