@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useAppSelector, useAppDispatch } from '../hooks';
-import { getSortType } from '../store/action';
+import { getSortOffers, getSortType } from '../store/action';
 import { SortType } from '../const';
 
 function PlacesSorting(): JSX.Element {
@@ -17,6 +17,7 @@ function PlacesSorting(): JSX.Element {
   function changeSorting(item: SortType) {
     dispatch(getSortType(item));
     setOpened(false);
+    dispatch(getSortOffers());
   }
 
 

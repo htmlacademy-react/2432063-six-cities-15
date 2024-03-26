@@ -7,3 +7,4 @@ export const setCityActive = createAction('mainPage/setCityActive', (value: stri
 export const getOffersActive = createAction('mainPage/getOffersActive');
 export const setMapActive = createAction('mainPage/setMapActive', (value: CityMap) => ({ payload: value }));
 export const getSortType = createAction('mainPage/getSortType', (value: SortType) => ({ payload: value }));
+export const getSortOffers = createAction('getSortOffers');
