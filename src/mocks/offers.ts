@@ -136,7 +136,91 @@ export const offers: OffersType = [
 
     previewImage: 'img/apartment-03.jpg',
     cardBookmarks: 'place-card__bookmark-button place-card__bookmark-button--active button',
-  }
+  },
+  {
+    id: '4',
+    title: 'Beautiful & luxurious apartment at great location',
+    type: 'Apartment',
+    price: 280,
+    city: {
+      name: 'Paris',
+      location: {
+        latitude: 48.856615550,
+        longitude: 2.351499004,
+        zoom: 10
+      }
+    },
+    location: {
+      latitude: 48.886615550,
+      longitude: 2.371499004,
+      zoom: 10
+    },
+    host: {
+      hostName: 'Mila',
+      isPro: false,
+      avatarUrl: 'https://i.pravatar.cc/128'
+    },
+
+    isFavorite: true,
+    isPremium: false,
+    rating: 3,
+    description: 'A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.',
+    bedrooms: 3,
+    goods: [
+      'Wi-Fi',
+      'Washing machine',
+    ],
+    images: [
+      'img/apartment-01.jpg',
+      'img/apartment-02.jpg',
+      'img/apartment-03.jpg',
+    ],
+
+    previewImage: 'img/apartment-03.jpg',
+    cardBookmarks: 'place-card__bookmark-button place-card__bookmark-button--active button',
+  },
+  {
+    id: '5',
+    title: 'Beautiful & luxurious apartment at great location',
+    type: 'Apartment',
+    price: 180,
+    city: {
+      name: 'Paris',
+      location: {
+        latitude: 48.856615550,
+        longitude: 2.351499004,
+        zoom: 10
+      }
+    },
+    location: {
+      latitude: 48.826615550,
+      longitude: 2.321499004,
+      zoom: 10
+    },
+    host: {
+      hostName: 'Mila',
+      isPro: false,
+      avatarUrl: 'https://i.pravatar.cc/128'
+    },
+
+    isFavorite: true,
+    isPremium: false,
+    rating: 2,
+    description: 'A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.',
+    bedrooms: 3,
+    goods: [
+      'Wi-Fi',
+      'Washing machine',
+    ],
+    images: [
+      'img/apartment-01.jpg',
+      'img/apartment-02.jpg',
+      'img/apartment-03.jpg',
+    ],
+
+    previewImage: 'img/apartment-03.jpg',
+    cardBookmarks: 'place-card__bookmark-button place-card__bookmark-button--active button',
+  },
 ];
 
 
